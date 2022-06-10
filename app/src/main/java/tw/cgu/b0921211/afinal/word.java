@@ -138,10 +138,8 @@ public class word extends AppCompatActivity
                 next.setVisibility(View.VISIBLE);
                 help.setVisibility(View.GONE);
                 clue.setText("");
-//                counter++;
                 point=point+20;
                 score.setText("目前得分:"+point+"分");
-//                goback.setVisibility(View.GONE);
             }else{
                 answer.setText("答案錯誤!!");     //答案錯誤
             }
