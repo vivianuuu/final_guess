@@ -15,7 +15,7 @@ public class movie extends AppCompatActivity
             implements DialogInterface.OnClickListener {
 
     EditText input;
-    Button help,confirm,next,goback,tryagain;
+    Button help,confirm,next,goback,tryagain,giveup;
     TextView clue,score,title,answer,end;
     String[] correct={"小美人魚","美女與野獸","花木蘭","海洋奇緣","冰雪奇緣"};
     String[] wordclue={"小","美","花","海","冰"};
@@ -35,6 +35,7 @@ public class movie extends AppCompatActivity
         next=(Button)findViewById(R.id.next);
         goback=(Button)findViewById(R.id.goback);
         tryagain=(Button)findViewById(R.id.tryagain);
+        giveup=(Button)findViewById(R.id.giveup);
         clue=(TextView)findViewById(R.id.clue);
         score=(TextView)findViewById(R.id.score);
         title=(TextView)findViewById(R.id.title);
@@ -73,6 +74,7 @@ public class movie extends AppCompatActivity
                 .show();
     }
     public void next(View view){
+        counter++;
         title.setText("迪士尼電影題:"+counter+"/5");
         next.setVisibility(View.GONE);
         help.setVisibility(View.VISIBLE);
@@ -103,6 +105,7 @@ public class movie extends AppCompatActivity
             title.setVisibility(View.GONE);
             help.setVisibility(View.GONE);
             goback.setVisibility(View.GONE);
+            giveup.setVisibility(View.GONE);
             if (point < 80) {
                 end.setText("闖關失敗");
                 tryagain.setVisibility(View.VISIBLE);
@@ -128,7 +131,7 @@ public class movie extends AppCompatActivity
                 next.setVisibility(View.VISIBLE);
                 help.setVisibility(View.GONE);
                 clue.setText("");
-                counter++;
+//                counter++;
                 point=point+20;
                 score.setText("目前得分:"+point+"分");
 //                goback.setVisibility(View.GONE);
