@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
         explain=(TextView)findViewById(R.id.explain);
 
-        explain.setText("遊戲方法 :\n依題目上的表情符號，猜出答案\n總分超過80分即為過關\n請先選出想挑戰的題目類型");
+        explain.setText("遊戲方法 :\n依題目上的表情符號，猜出答案\n" +
+                        "總分超過80分即為過關\n請先選出想挑戰的題目類型");
     }
     public void cartoon(View view){
         Intent it=new Intent(this,cartoon.class);

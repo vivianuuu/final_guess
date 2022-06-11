@@ -21,7 +21,11 @@ public class word extends AppCompatActivity
     TextView clue,score,title,answer,end;
     String[] correct={"守株待兔","文質彬彬","驕兵必敗","趾高氣揚","望眼欲穿"};
     String[] wordclue={"守","文","驕","趾","望"};
-    String[] sentence={"比喻妄想不勞而獲或等著目標自己送上門來","形容人舉止文雅有禮","比喻自負強大而輕敵的軍隊必會打敗仗","形容驕傲自滿、得意忘形的樣子","形容盼望的極為殷切"};
+    String[] sentence={"比喻妄想不勞而獲或等著目標自己送上門來",
+                        "形容人舉止文雅有禮",
+                        "比喻自負強大而輕敵的軍隊必會打敗仗",
+                        "形容驕傲自滿、得意忘形的樣子",
+                        "形容盼望的極為殷切"};
 
     int counter=1;
     int point=0;
@@ -146,9 +150,4 @@ public class word extends AppCompatActivity
         }
 
     }
-    public void tryagain(View view){
-        Intent it= new Intent(this,MainActivity.class);
-        startActivity(it);
-    }
-
 }
